@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
+            $table->string('task');
+            //0 is F 1 is T
+            $table->boolean('is_completed')->default(0);
             $table->timestamps();
         });
     }
